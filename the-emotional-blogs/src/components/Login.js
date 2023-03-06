@@ -12,7 +12,26 @@ const Login = () => {
           />
         </div>
         <div className="login-form">
-          <h2>hey</h2>
+          <h2 className="login-header">Login</h2>
+          <form className="login">
+            <div className="form-item">
+              <label htmlFor="" className="form-label">
+                Name
+              </label>
+              <input type="text" className="form-control" />
+            </div>
+            <div className="form-item">
+              <label htmlFor="" className="form-label">
+                Password
+              </label>
+              <input type="password" className="form-control" />
+            </div>
+            <div className="form-item">
+              <button type="submit" className="submit-login">
+                Login
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

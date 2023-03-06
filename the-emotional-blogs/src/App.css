@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Allura&family=Babylonica&family=DM+Serif+Display&family=Itim&family=Knewave&family=Montserrat&family=Prata&family=Unbounded&family=Unna&display=swap");
 .App {
   text-align: center;
 }
@@ -6,6 +7,8 @@
 .container {
   height: 100vh;
   padding: 4rem;
+  background: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
 }
 
 .form-container {
@@ -20,9 +23,49 @@
 .login-form {
   width: 50%;
   border-style: solid;
+  background-color: #01b7ff;
 }
 
 .imagel {
   width: 100%;
-  height: 100%;
+}
+
+.form-item {
+  padding: 10px;
+  margin: 10px;
+}
+
+.form-label {
+  padding: 5px;
+  margin: 10px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-sizing: border-box;
+  font-family: "DM Serif Display";
+}
+
+.submit-login {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-header,
+.form-label {
+  /* font-family: "DM Serif Display"; */
+  font-family: "Montserrat";
 }
