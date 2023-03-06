@@ -2,7 +2,7 @@ import "../App.css";
 
 const Login = () => {
   return (
-    <div className="container">
+    <div className="login-container">
       <div className="form-container">
         <div className="login-image">
           <img
