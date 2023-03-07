@@ -13,7 +13,7 @@ const Homepage = () => {
             With supporting text below as a natural lead-in to additional
             content.
           </p>
-          <a href="#" class="btn btn-primary">
+          <a href="/view" class="btn btn-primary">
             View
           </a>
         </div>

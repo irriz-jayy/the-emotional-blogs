@@ -7,7 +7,7 @@ const Login = () => {
         <div className="login-image">
           <img
             src="https://raw.githubusercontent.com/irriz-jayy/images/main/logo.png"
-            alt="login image"
+            alt="login"
             className="imagel"
           />
         </div>
