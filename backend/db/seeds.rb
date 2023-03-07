@@ -24,8 +24,8 @@ puts "Creating comments..."
 
 5.times do
     Comment.create(
-        comment: Faker::Lorem.paragraph_by_chars(number: 100)
-        user_id: rand(User.first.id..User.last.id)
+        comment: Faker::Lorem.paragraph_by_chars(number: 100),
+        user_id: rand(User.first.id..User.last.id),
         blog_id: rand(Blog.first.id..Blog.last.id)
     )
 end
