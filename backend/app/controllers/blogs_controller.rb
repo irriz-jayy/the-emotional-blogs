@@ -19,16 +19,16 @@ class BlogsController< Sinatra::Base
     
     post "/blogs" do
         # get all existing authors
-        authors = Author.all
+        users = User.all
         
         # randomly select an author
-        author = authors.sample
+        user= user.sample
         
         # create the new blog post with the selected author
         blog = Blog.create(
           title: params[:title],
           content: params[:content],
-          author_id: author.id
+          user_id: user.id
         )
         
         blog.to_json
