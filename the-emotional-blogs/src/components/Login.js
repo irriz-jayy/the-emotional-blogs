@@ -16,15 +16,23 @@ const Login = () => {
           <form className="login">
             <div className="form-item">
               <label htmlFor="" className="form-label">
-                Name
+                Username
               </label>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Username"
+              />
             </div>
             <div className="form-item">
               <label htmlFor="" className="form-label">
                 Password
               </label>
-              <input type="password" className="form-control" />
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Password"
+              />
             </div>
             <div className="form-item">
               <button type="submit" className="submit-login">
