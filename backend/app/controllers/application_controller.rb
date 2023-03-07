@@ -9,6 +9,7 @@ class ApplicationController < Sinatra::Base
   end    
 
   use BlogsController
+  use UsersController
 end
 
 
