@@ -1,15 +1,18 @@
 class BlogsController< Sinatra::Base
 
-    def index
-        blogs = Blog.joins(:user).select('blogs.*, users.name as user_name')
-        render json: blogs
-    end
+   
 
 
-    get "/blogs" do
-        blogs=Blog.all
-        blogs.to_json
+    # get "/blogs" do
+    #     blogs=Blog.all
+    #     blogs.to_json
+    # end
+
+    get '/blogs' do
+        @blogs = Blog.joins(:user).select("blogs.*, users.username AS username")
+        @blogs.to_json
     end
+      
     
     get "/blogs/:id" do
         blog=Blog.find(params[:id])
