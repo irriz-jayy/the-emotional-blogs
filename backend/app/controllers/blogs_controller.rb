@@ -1,5 +1,10 @@
 class BlogsController< Sinatra::Base
 
+    def index
+        blogs = Blog.joins(:user).select('blogs.*, users.name as user_name')
+        render json: blogs
+    end
+
 
     get "/blogs" do
         blogs=Blog.all
@@ -22,7 +27,7 @@ class BlogsController< Sinatra::Base
         users = User.all
         
         # randomly select an author
-        user= user.sample
+        user= users.sample
         
         # create the new blog post with the selected author
         blog = Blog.create(

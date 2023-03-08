@@ -5,7 +5,8 @@ class CreateBlogs < ActiveRecord::Migration[6.1]
       t.string :title
       t.text :content
 
-      t.timestamps
-    end
+      t.datetime :created_at, precision: 0, null: false
+      t.datetime :updated_at, precision: 0, null: false
+      end
   end
 end
