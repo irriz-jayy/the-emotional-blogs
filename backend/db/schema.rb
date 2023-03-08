@@ -13,24 +13,29 @@
 ActiveRecord::Schema.define(version: 2023_03_05_105049) do
 
   create_table "blogs", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "content", null: false
     t.integer "user_id", null: false
-    t.string "title"
-    t.text "content"
-    t.datetime "created_at", precision: 0, null: false
-    t.datetime "updated_at", precision: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
+    t.text "comment", null: false
     t.integer "user_id", null: false
     t.integer "blog_id", null: false
-    t.text "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["blog_id"], name: "index_comments_on_blog_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "username", null: false
+    t.string "password", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "blogs", "users"
