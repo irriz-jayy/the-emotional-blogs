@@ -26,21 +26,19 @@ class BlogsController< Sinatra::Base
     end
     
     post "/blogs" do
-        # get all existing authors
-        users = User.all
-        
-        # randomly select an author
-        user= users.sample
-        
+        # find the user by username
+        user = User.find_by(username: params[:username])
+      
         # create the new blog post with the selected author
         blog = Blog.create(
           title: params[:title],
           content: params[:content],
           user_id: user.id
         )
-        
+      
         blog.to_json
-    end  
+    end
+      
     
     patch "/blogs/:id" do
         blog=Blog.find(params[:id])
