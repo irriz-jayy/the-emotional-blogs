@@ -9,7 +9,7 @@ class BlogsController< Sinatra::Base
     # end
 
     get '/blogs' do
-        @blogs = Blog.joins(:user).select("blogs.*, users.username AS username, users.image_URL AS image_url")
+        @blogs = Blog.joins(:user).select("blogs.*, users.username AS username, users.image_URL AS image_url, users.user_role AS user_role, users.user_href AS user_href")
         @blogs.to_json
       end
       
