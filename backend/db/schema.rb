@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_05_105049) do
+ActiveRecord::Schema.define(version: 2023_03_10_104545) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title", null: false
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2023_03_05_105049) do
     t.string "password", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image_URL"
   end
 
   add_foreign_key "blogs", "users"
