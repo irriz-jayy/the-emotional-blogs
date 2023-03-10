@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_10_104545) do
+ActiveRecord::Schema.define(version: 2023_03_10_114244) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title", null: false
@@ -18,6 +18,11 @@ ActiveRecord::Schema.define(version: 2023_03_10_104545) do
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "date"
+    t.string "datetime"
+    t.string "category_title"
+    t.string "category_href"
+    t.string "blog_href"
     t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
@@ -37,6 +42,8 @@ ActiveRecord::Schema.define(version: 2023_03_10_104545) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_URL"
+    t.string "user_role"
+    t.string "user_href"
   end
 
   add_foreign_key "blogs", "users"
