@@ -124,6 +124,16 @@ export default function Navbar() {
                         {({ active }) => (
                           <a
                             href="/login"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              if (
+                                window.confirm(
+                                  "Are you sure you want to sign out?"
+                                )
+                              ) {
+                                window.location.href = "/login";
+                              }
+                            }}
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
